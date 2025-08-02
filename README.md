@@ -1,7 +1,7 @@
 # WELCOME TO MY CREATIVE PORTFOLIO.
 # Florence Ndinda — Developer Portfolio
 
-Welcome to my personal portfolio, a curated space where logic meets emotion and code becomes art. Built entirely using **HTML**, **CSS**, and a spark of intentional design, this site showcases not just what I do—but who I am.
+Welcome to my personal portfolio, a curated space where logic meets emotion and code becomes art. Built entirely using **HTML**, **CSS**, and a spark of intentional design, this site showcases not just what I do, but who I am.
 
 ---
 
