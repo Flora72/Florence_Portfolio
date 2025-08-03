@@ -1,7 +1,7 @@
 # WELCOME TO MY CREATIVE PORTFOLIO.
 # Florence Ndinda — Developer Portfolio
 
-Welcome to my personal portfolio, a curated space where logic meets emotion and code becomes art. Built entirely using **HTML**, **CSS**, and a spark of intentional design, this site showcases not just what I do—but who I am.
+Welcome to my personal portfolio, a curated space where logic meets emotion and code becomes art. Built entirely using HTML, CSS, and a spark of intentional design, this site showcases not just what I do, but who I am.
 
 ---
 
@@ -46,7 +46,7 @@ Grid-based layout of education cards with red glow hover effect. Programs includ
 ### Skills
 Progress bars in bold red showing proficiency in languages and tools like:
 - HTML, CSS, JavaScript
-- MySQL, C#
+- MySQL, C
 - Python, Django
 
 ### Projects
@@ -55,7 +55,7 @@ Elegant card layout with embedded previews and descriptions. Includes:
 - School Inventory System
 
 ### Contact
-Form with name, email, and message fields—all styled with a warm black-red palette. Embedded map of Nairobi included via iframe, styled for harmony.
+Form with name, email, and message fields, all styled with a warm black-red palette. Embedded map of Nairobi included via iframe, styled for harmony.
 
 ### README & Extras
 This file, describing the portfolio architecture, thought process, and potential future improvements.
@@ -64,7 +64,7 @@ This file, describing the portfolio architecture, thought process, and potential
 
 ## Theme & Design Philosophy
 
-> **Dark. Bold. Expressive.**
+### Dark. Bold. Expressive.
 
 This portfolio embraces depth through a black canvas,with a Manga girl character, contrasted by glowing reds that symbolize passion and strength. Typography is clean yet lyrical, layout is intuitive but layered, and every hover carries subtle intent.
 
@@ -74,7 +74,6 @@ This portfolio embraces depth through a black canvas,with a Manga girl character
 
 - **Languages:** HTML5, CSS3
 - **Tools:** VSCode, GitHub
-- **Frameworks/Libraries:** None (intentionally vanilla for clarity)
 - **Design Aesthetic:** Inspired by storytelling, anime, music theory, and layered identity
 
 ---
