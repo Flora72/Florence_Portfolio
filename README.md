@@ -12,7 +12,7 @@ I'm **Florence Ndinda**, a self-driven developer and aspiring writer based in Na
 ---
 
 ## Live Preview
-(https://flora72.github.io/HCK1_Portfolio/)
+(https://flora72.github.io/Portfolio_HCK1/)
 
 You can also view the code and structure directly in this repository.
 
