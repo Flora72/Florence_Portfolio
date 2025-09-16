@@ -13,7 +13,7 @@ I'm **Florence Ndinda**, a self-driven developer, aspiring writer, and emotional
 
 ##  Live Preview  
 Interact with the deployed portfolio.
-[View Portfolio](https://flora72.github.io/Portfolio_HCK1/)  
+[View Portfolio](https://flora72.github.io/Florence_Portfolio/) <br>
 You can also explore the code and structure directly in this repository.
 [Portfolio Repository](https://github.com/Flora72/Florence_Portfolio)
 
