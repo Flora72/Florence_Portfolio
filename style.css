@@ -89,42 +89,60 @@ nav a.active{
 }
 
 /* education is key? Beats me  */
-.education-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+.education {
+  padding: 60px 40px;
+  background-color: #0f0f0f;
 }
 
-.edu-card {
-  background-color: #1a1a1a;
-  border: 1px solid #b74b4b;
-  padding: 20px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.edu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 10px #b74b4b;
-}
-
-.edu-card h3 {
-  color: #fff;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.edu-card i {
-  margin-right: 8px;
+.section-heading {
+  text-align: center;
+  font-size: 2.2rem;
   color: #b74b4b;
+  margin-bottom: 10px;
 }
 
 .section-subtext {
   text-align: center;
   font-style: italic;
+  font-size: 1.3rem;
   color: #ccc;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.edu-card {
+  background-color: #1a1a1a;
+  border: 1px solid #b74b4b;
+  padding: 25px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #b74b4b;
+}
+
+.edu-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.edu-card p {
+  font-size: 1.2rem;
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+.edu-card i {
+  margin-right: 8px;
+  color: #b74b4b;
 }
 
 
@@ -258,16 +276,6 @@ nav a.active{
     color: #b74b4b;
     margin-bottom: 0.5rem;
 }
-
-.contact-map {
-  margin-top: 3rem;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #000; 
-  box-shadow: 0 0 20px rgba(183, 75, 75, 0.4);
-  border: 2px solid #b74b4b;
-}
-
 
 .contact-form input,
 .contact-form textarea {
