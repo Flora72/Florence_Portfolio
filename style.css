@@ -22,6 +22,7 @@ body{
     height: 100vh;
     overflow-x: hidden;
     background-color: black;
+    padding-top: 10rem; 
     color: white;
 }
 
@@ -73,6 +74,20 @@ nav a.active{
     color: #b74b4b;
     text-align: center;
 }
+
+.about,
+.education,
+.skills-container,
+.projects,
+.contact {
+    padding-top: 10rem;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    transition: background-color 0.3s ease;
+}
+
 
 /* about section/ get to know your amazing queen lol  */
 .about-content {
