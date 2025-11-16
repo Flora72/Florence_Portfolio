@@ -1,5 +1,5 @@
 #  Welcome to My Creative Portfolio  
-## Florence Ndinda — Developer & Storyteller
+## Florence Ndinda - Developer & Writer
 
 Welcome to my personal portfolio a curated sanctuary where logic meets emotion, and code becomes a vessel for healing, rebellion, and reflection. Built entirely using HTML, CSS, and a spark of poetic design, this site showcases not just what I do, but who I am.
 
