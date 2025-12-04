@@ -61,9 +61,6 @@ Elegant card layout with embedded previews and descriptions. Includes:
 - **Healing Atlas** – A survivor-centered sanctuary for reflection and emotional recovery  
   [Explore Healing Atlas](https://healing-atlas.onrender.com/)
 
-###  Contact  
-Form with name, email, and message fields, styled in a warm black-red palette. Embedded map of Nairobi included via iframe.
-
 ---
 
 ##  Theme & Design Philosophy
