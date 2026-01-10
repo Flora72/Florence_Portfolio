@@ -57,12 +57,9 @@ Progress bars in bold red showing proficiency in:
 Elegant card layout with embedded previews and descriptions. Includes:
 
 - **Hospital Queue Management System** – Django-based smart queue system  
-- **School Inventory System** – Inventory and sales management platform  
+- **Voice it out** – A platform built for women to amplify user voices. Built using Python and Django for robust backend
 - **Healing Atlas** – A survivor-centered sanctuary for reflection and emotional recovery  
-  [Explore Healing Atlas](https://healingatlas.onrender.com/)
-
-###  Contact  
-Form with name, email, and message fields, styled in a warm black-red palette. Embedded map of Nairobi included via iframe.
+  [Explore Healing Atlas](https://healing-atlas.onrender.com/)
 
 ---
 
@@ -81,15 +78,6 @@ This portfolio embraces depth through a black canvas, accented by glowing reds t
 
 ---
 
-## Future Plans
-
-- Add light/dark theme toggle  
-- Animate scroll effects  
-- Add project modals or dedicated pages for deeper storytelling  
-- Integrate writing samples and emotional reflections  
-- Build a blog section for creative and technical essays  
-
----
 
 ## Connect
 
