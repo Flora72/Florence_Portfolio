@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florence Ndinda </title>
+    <title>Florence Ndinda</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     
-    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg">
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0a'/><text x='18' y='68' font-family='sans-serif' font-weight='900' font-size='48' fill='%23ffffff'>FN</text><circle cx='82' cy='64' r='6' fill='%23ff3333'/></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
@@ -37,7 +36,6 @@
     </script>
 
     <style>
-        /* BASE & BACKGROUND STYLES */
         body { color: #e5e5e5; }
         .grid-bg {
             background-image: linear-gradient(#1a1a1a 1px, transparent 1px),
@@ -46,21 +44,18 @@
             mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
         }
         
-        /* SCROLLBAR */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0a0a0a; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #ff3333; }
         
-        /* NODES & INTERACTION */
         .node:hover {
             transform: scale(1.1);
             border-color: #ff3333;
             box-shadow: 0 0 15px rgba(255, 51, 51, 0.3);
             z-index: 10;
         }
-        
-        /* RESUME VIEWER ANIMATION */
+
         #resume-viewer {
             max-height: 0;
             overflow: hidden;
@@ -72,7 +67,6 @@
             opacity: 1;
         }
         
-        /* BUTTON GLOW */
         .cool-btn {
             position: relative;
             overflow: hidden;
@@ -95,6 +89,7 @@
 </head>
 <body class="antialiased selection:bg-accent selection:text-white">
 
+    <!-- NAVBAR -->
     <nav class="fixed top-0 w-full z-50 bg-dark/90 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="font-tech text-2xl font-bold tracking-wide">
@@ -114,46 +109,48 @@
                 Contact Me
             </a>
 
-            <button class="md:hidden text-xl text-white z-50" onclick="toggleMobileMenu()">
+            <button class="md:hidden text-xl text-white z-50 p-2" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </nav>
     
-    <div id="mobile-menu-overlay" class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-sm transform translate-x-full transition-transform duration-500 ease-in-out">
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-[60] bg-dark/98 backdrop-blur-md transform translate-x-full transition-transform duration-300 ease-in-out">
         <div class="flex flex-col h-full p-8">
-            <div class="flex justify-between items-center mb-12">
-                <div class="font-tech text-2xl font-bold tracking-wide text-white">SYSTEM<span class="text-accent">_NAV</span></div>
-                <button onclick="toggleMobileMenu()" class="text-3xl text-gray-400 hover:text-accent transition-colors">
+            <div class="flex justify-between items-center mb-10 pb-4 border-b border-white/10">
+                <div class="font-tech text-xl font-bold tracking-wider text-white">Menu</div>
+                <button onclick="toggleMobileMenu()" class="text-2xl text-gray-400 hover:text-accent transition-colors p-2">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
             
-            <div class="flex flex-col gap-6 text-xl font-tech tracking-wider uppercase">
-                <a href="#home" class="p-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">[01] Home</a>
-                <a href="#services" class="p-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">[02] Services</a>
-                <a href="#skills" class="p-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">[03] Skills</a>
-                <a href="#experience" class="p-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">[04] Experience</a>
-                <a href="#education" class="p-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">[05] Education</a>
-                <a href="#projects" class="p-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">[06] Projects</a>
-                <a href="#contact" class="mt-4 p-3 bg-accent/20 text-accent font-bold rounded-lg transition-colors" onclick="toggleMobileMenu()">[07] Contact</a>
+            <div class="flex flex-col gap-4 text-lg font-tech tracking-wider uppercase">
+                <a href="#home" class="py-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">Home</a>
+                <a href="#services" class="py-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">Services</a>
+                <a href="#skills" class="py-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">Skills</a>
+                <a href="#experience" class="py-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">Experience</a>
+                <a href="#education" class="py-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">Education</a>
+                <a href="#projects" class="py-3 border-b border-white/5 hover:text-accent transition-colors" onclick="toggleMobileMenu()">Projects</a>
+                <a href="#contact" class="mt-4 py-3 bg-accent text-white text-center font-bold rounded transition-colors" onclick="toggleMobileMenu()">Contact</a>
             </div>
             
-            <div class="mt-auto pt-8 border-t border-white/10 text-center">
-                <a href="Florence Ndinda.pdf" download class="text-sm text-gray-400 hover:text-white transition-colors">
-                    <i class="fa-solid fa-download mr-2"></i> Download Full CV
+            <div class="mt-auto pt-6 border-t border-white/10 text-center">
+                <a href="Florence Ndinda.pdf" download class="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i> Download Full CV
                 </a>
             </div>
         </div>
     </div>
 
-    <section id="home" class="pt-32 pb-20 px-6 relative">
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-32 pb-16 px-6 relative">
         <div class="absolute inset-0 grid-bg -z-10 opacity-30"></div>
         
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded bg-white/5 border border-white/10 text-xs font-code text-accent tracking-wider animate-pulse-slow">
-                    <span class="text-green-400">>>></span> print("Hello, World!")
+                    <span class="text-green-400">&gt;&gt;&gt;</span> print("Hello, World!")
                 </div>
                 
                 <h1 class="text-6xl md:text-7xl lg:text-8xl font-tech font-bold leading-none">
@@ -187,51 +184,52 @@
                 </div>
                 <div class="p-6 bg-card border border-white/5">
                     <h3 class="text-3xl font-tech font-bold">Logic</h3>
-                    <p class="text-sm text-gray-500">Python & Prolog</p>
+                    <p class="text-sm text-gray-500">Python & Postgres</p>
                 </div>
                 <div class="p-6 bg-card border border-white/5 border-r-2 border-r-accent">
                     <h3 class="text-3xl font-tech font-bold">Writing</h3>
-                    <p class="text-sm text-gray-500">Technical Docs & Articles</p>
+                    <p class="text-sm text-gray-500">Technical Docs & Specs</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="border-y border-white/10 bg-card/50">
+    <!-- COUNT-UP ANIMATION -->
+    <section id="stats-section" class="border-y border-white/10 bg-card/50">
         <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-center">
-                <div class="text-3xl font-tech font-bold text-white mb-1">3+</div>
+                <div class="text-3xl font-tech font-bold text-white mb-1"><span class="counter" data-target="3">0</span>+</div>
                 <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Years Experience</div>
             </div>
             <div class="text-center">
-                <div class="text-3xl font-tech font-bold text-white mb-1">12</div>
+                <div class="text-3xl font-tech font-bold text-white mb-1"><span class="counter" data-target="12">0</span></div>
                 <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Projects Built</div>
             </div>
             <div class="text-center">
-                <div class="text-3xl font-tech font-bold text-white mb-1">5</div>
+                <div class="text-3xl font-tech font-bold text-white mb-1"><span class="counter" data-target="5">0</span></div>
                 <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Certifications</div>
             </div>
             <div class="text-center">
-                <div class="text-3xl font-tech font-bold text-white mb-1">20+</div>
+                <div class="text-3xl font-tech font-bold text-white mb-1"><span class="counter" data-target="20">0</span>+</div>
                 <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">GitHub Repos</div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION WITH TOGGLE -->
-    <section id="services" class="py-24 px-6 bg-dark">
+    <!-- SERVICES SECTION -->
+    <section id="services" class="pt-12 pb-6 md:py-24 px-6 bg-dark">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
                 <div>
                     <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">Services</h2>
                     <h3 class="text-4xl font-tech font-bold text-white">What I Offer</h3>
                 </div>
-                <!-- Track Toggle -->
-                <div class="mt-6 md:mt-0 flex items-center bg-card border border-white/10 rounded-lg p-1">
-                    <button id="btn-service-swe" onclick="toggleServices('swe')" class="px-4 py-2 text-xs font-tech font-bold uppercase rounded bg-accent text-white transition-all">
+                <!-- Track Toggle: Full width on mobile -->
+                <div class="mt-6 md:mt-0 flex items-center bg-card border border-white/10 rounded-lg p-1 w-full sm:w-auto">
+                    <button id="btn-service-swe" onclick="toggleServices('swe')" class="flex-1 sm:flex-initial px-4 py-2.5 text-xs font-tech font-bold uppercase rounded bg-accent text-white transition-all text-center">
                         Software Development
                     </button>
-                    <button id="btn-service-ds" onclick="toggleServices('ds')" class="px-4 py-2 text-xs font-tech font-bold uppercase rounded text-gray-400 hover:text-white transition-all">
+                    <button id="btn-service-ds" onclick="toggleServices('ds')" class="flex-1 sm:flex-initial px-4 py-2.5 text-xs font-tech font-bold uppercase rounded text-gray-400 hover:text-white transition-all text-center">
                         Data Science
                     </button>
                 </div>
@@ -289,7 +287,8 @@
         </div>
     </section>
 
-    <section id="skills" class="py-24 px-6 relative overflow-hidden">
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="pt-6 pb-12 md:py-24 px-6 relative overflow-hidden">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             
             <div>
@@ -306,6 +305,7 @@
                         <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> HTML5 / CSS3 / JS</li>
                         <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> C Programming</li>
                         <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> MySQL / PostgreSQL</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> Git & GitHub</li>
                     </ul>
                     <ul class="space-y-3">
                         <li class="font-bold text-white mb-2 uppercase text-xs tracking-wider">Data Science</li>
@@ -313,25 +313,33 @@
                         <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> Scikit-learn</li>
                         <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> Matplotlib/Seaborn</li>
                         <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> Jupyter Notebooks</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-accent rounded-full"></span> Data Modeling</li>
                     </ul>
                 </div>
             </div>
 
+            <!-- INTERACTIVE DIAGRAM -->
             <div class="relative h-[400px] bg-card border border-white/10 rounded-xl overflow-hidden">
                 <div class="absolute inset-0 grid-bg opacity-20"></div>
-                <div class="node absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-dark border border-accent rounded-full flex items-center justify-center z-10">
+                <div class="node absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-dark border border-accent rounded-full flex items-center justify-center z-10 transition-transform cursor-pointer">
                     <span class="font-tech font-bold text-white">TECH</span>
                 </div>
-                <div class="node absolute top-[15%] left-[20%] px-4 py-2 bg-dark border border-white/20 rounded-lg text-xs font-bold text-gray-300">Django</div>
-                <div class="node absolute top-[15%] right-[20%] px-4 py-2 bg-dark border border-white/20 rounded-lg text-xs font-bold text-gray-300">Data Sci</div>
-                <div class="node absolute bottom-[15%] left-[20%] px-4 py-2 bg-dark border border-white/20 rounded-lg text-xs font-bold text-gray-300">Python</div>
-                <div class="node absolute bottom-[15%] right-[20%] px-4 py-2 bg-dark border border-white/20 rounded-lg text-xs font-bold text-gray-300">SQL</div>
-                <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20"><line x1="50%" y1="50%" x2="25%" y2="20%" stroke="white"/><line x1="50%" y1="50%" x2="75%" y2="20%" stroke="white"/><line x1="50%" y1="50%" x2="25%" y2="80%" stroke="white"/><line x1="50%" y1="50%" x2="75%" y2="80%" stroke="white"/></svg>
+                <div class="node absolute top-[15%] left-[20%] px-4 py-2 bg-dark border border-white/20 rounded-lg text-xs font-bold text-gray-300 transition-transform cursor-pointer">Django</div>
+                <div class="node absolute top-[15%] right-[20%] px-4 py-2 bg-dark border border-white/20 rounded-lg text-xs font-bold text-gray-300 transition-transform cursor-pointer">Data Sci</div>
+                <div class="node absolute bottom-[15%] left-[20%] px-4 py-2 bg-dark border border-white/20 rounded-lg text-xs font-bold text-gray-300 transition-transform cursor-pointer">Python</div>
+                <div class="node absolute bottom-[15%] right-[20%] px-4 py-2 bg-dark border border-white/20 rounded-lg text-xs font-bold text-gray-300 transition-transform cursor-pointer">SQL</div>
+                <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20">
+                    <line x1="50%" y1="50%" x2="25%" y2="20%" stroke="white"/>
+                    <line x1="50%" y1="50%" x2="75%" y2="20%" stroke="white"/>
+                    <line x1="50%" y1="50%" x2="25%" y2="80%" stroke="white"/>
+                    <line x1="50%" y1="50%" x2="75%" y2="80%" stroke="white"/>
+                </svg>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 px-6 bg-[#0f0f0f]">
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-16 md:py-24 px-6 bg-[#0f0f0f]">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">02 / Career</h2>
             <h3 class="text-4xl font-tech font-bold text-white mb-12">Professional Experience</h3>
@@ -342,7 +350,7 @@
                     <div class="absolute -left-1.5 top-2 w-3 h-3 bg-accent rounded-full"></div>
                     <div class="flex flex-col md:flex-row gap-4 justify-between mb-2">
                         <h4 class="text-xl font-bold text-white">Organizing Director</h4>
-                        <span class="text-xs font-bold text-gray-500 bg-white/5 px-3 py-1 rounded">July 2025 - Present</span>
+                        <span class="text-xs font-bold text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded">July 2025 - Present</span>
                     </div>
                     <p class="text-accent text-sm font-bold mb-4">Digital Leap Africa</p>
                     <ul class="text-sm text-gray-400 space-y-2 list-disc list-inside">
@@ -351,12 +359,11 @@
                     </ul>
                 </div>
 
-                <!-- ATTACHEE EXPERIENCE -->
                 <div class="relative pl-8 md:pl-12">
                     <div class="absolute -left-1.5 top-2 w-3 h-3 bg-gray-700 rounded-full"></div>
                     <div class="flex flex-col md:flex-row gap-4 justify-between mb-2">
                         <h4 class="text-xl font-bold text-white">Attachee</h4>
-                        <span class="text-xs font-bold text-gray-500 bg-white/5 px-3 py-1 rounded">May 2025 - Aug 2025</span>
+                        <span class="text-xs font-bold text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded">May 2025 - Aug 2025</span>
                     </div>
                     <p class="text-accent text-sm font-bold mb-4">Ministry of Education – State Department for Higher Education and Research</p>
                     <ul class="text-sm text-gray-400 space-y-2 list-disc list-inside">
@@ -369,7 +376,7 @@
                     <div class="absolute -left-1.5 top-2 w-3 h-3 bg-gray-700 rounded-full"></div>
                     <div class="flex flex-col md:flex-row gap-4 justify-between mb-2">
                         <h4 class="text-xl font-bold text-white">Technical Mentor</h4>
-                        <span class="text-xs font-bold text-gray-500 bg-white/5 px-3 py-1 rounded">Oct 2025 - Dec 2025</span>
+                        <span class="text-xs font-bold text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded">Oct 2025 - Dec 2025</span>
                     </div>
                     <p class="text-accent text-sm font-bold mb-4">eMobilis Technical Institute</p>
                     <ul class="text-sm text-gray-400 space-y-2 list-disc list-inside">
@@ -382,7 +389,7 @@
                     <div class="absolute -left-1.5 top-2 w-3 h-3 bg-gray-700 rounded-full"></div>
                     <div class="flex flex-col md:flex-row gap-4 justify-between mb-2">
                         <h4 class="text-xl font-bold text-white">Freelance Developer</h4>
-                        <span class="text-xs font-bold text-gray-500 bg-white/5 px-3 py-1 rounded">2023 - Present</span>
+                        <span class="text-xs font-bold text-gray-400 bg-white/5 border border-white/10 px-3 py-1 rounded">2023 - Present</span>
                     </div>
                     <p class="text-accent text-sm font-bold mb-4">Independent</p>
                     <ul class="text-sm text-gray-400 space-y-2 list-disc list-inside">
@@ -395,7 +402,8 @@
         </div>
     </section>
 
-    <section id="education" class="py-24 px-6">
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-16 md:py-24 px-6">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">03 / Knowledge</h2>
             <h3 class="text-4xl font-tech font-bold text-white mb-12">Education & Certifications</h3>
@@ -403,16 +411,19 @@
             <div class="grid md:grid-cols-2 gap-8">
                 
                 <div class="p-8 bg-card border border-white/5 rounded-xl hover:border-accent/50 transition-colors md:col-span-2">
-                    <h4 class="text-xl font-bold text-white">BSc. Applied Computing</h4>
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="text-xl font-bold text-white">BSc. Applied Computing</h4>
+                        <span class="text-[10px] bg-white/10 text-gray-400 border border-white/10 px-3 py-1 rounded font-bold uppercase tracking-wider">Completed</span>
+                    </div>
                     <p class="text-accent text-sm font-bold mt-1">KCA University</p>
-                    <p class="text-xs text-gray-500 mb-4 font-bold uppercase tracking-wider">Ongoing</p>
-                    <p class="text-sm text-gray-400">Bachelor of Science in Computer Science (Applied Computing). Focusing on core algorithms, system architecture, software engineering principles, and developing a strong foundation in various programming languages and web development.</p>
+                    <p class="text-xs text-gray-500 mb-4 font-bold uppercase tracking-wider">Graduate Degree</p>
+                    <p class="text-sm text-gray-400">Bachelor of Science in Applied Computing. Specialized in core algorithms, system architecture, software engineering principles, and developing a strong foundation in diverse programming paradigms and full-stack web platforms.</p>
                 </div>
 
                 <div class="p-8 bg-card border border-white/5 rounded-xl hover:border-accent/50 transition-colors">
                     <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-white">Software Development</h4>
-                        <span class="text-[10px] bg-accent/20 text-accent px-2 py-1 rounded font-bold uppercase">AI Spec</span>
+                        <span class="text-[10px] bg-white/10 text-gray-400 border border-white/10 px-2.5 py-1 rounded font-bold uppercase">Certified</span>
                     </div>
                     <p class="text-accent text-sm font-bold mt-1">Power Learn Project (PLP)</p>
                     <ul class="text-sm text-gray-400 space-y-2 list-disc list-inside mt-4">
@@ -424,7 +435,7 @@
                 <div class="p-8 bg-card border border-white/5 rounded-xl hover:border-accent/50 transition-colors">
                      <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-white">Applied Data Science Lab</h4>
-                        <span class="text-[10px] bg-white/10 text-gray-400 px-2 py-1 rounded font-bold uppercase">Certified</span>
+                        <span class="text-[10px] bg-white/10 text-gray-400 border border-white/10 px-2.5 py-1 rounded font-bold uppercase">Certified</span>
                     </div>
                     <p class="text-accent text-sm font-bold mt-1">WorldQuant University</p>
                     <ul class="text-sm text-gray-400 space-y-2 list-disc list-inside mt-4">
@@ -436,140 +447,164 @@
                 <div class="p-8 bg-card border border-white/5 rounded-xl hover:border-accent/50 transition-colors">
                      <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-white">AI Career Essentials (AICE)</h4>
-                        <span class="text-[10px] bg-white/10 text-gray-400 px-2 py-1 rounded font-bold uppercase">2024</span>
+                        <span class="text-[10px] bg-white/10 text-gray-400 border border-white/10 px-2.5 py-1 rounded font-bold uppercase">Certified</span>
                     </div>
                     <p class="text-accent text-sm font-bold mt-1">ALX Africa</p>
                     <ul class="text-sm text-gray-400 space-y-2 list-disc list-inside mt-4">
-                        <li>Developed AI fluency to understand and collaborate effectively with AI tools.</li>
-                        <li>Built essential skills in problem-solving and adaptability.</li>
+                        <li>Developed AI fluency to collaborate effectively with modern AI workflows.</li>
+                        <li>Built essential skills in adaptive technical problem-solving and systems analysis.</li>
                     </ul>
                 </div>
 
                 <div class="p-8 bg-card border border-white/5 rounded-xl hover:border-accent/50 transition-colors">
                      <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-white">Web Development</h4>
-                        <span class="text-[10px] bg-white/10 text-gray-400 px-2 py-1 rounded font-bold uppercase">Certified</span>
+                        <span class="text-[10px] bg-white/10 text-gray-400 border border-white/10 px-2.5 py-1 rounded font-bold uppercase">Certified</span>
                     </div>
                     <p class="text-accent text-sm font-bold mt-1">eMobilis Technical Institute</p>
                     <ul class="text-sm text-gray-400 space-y-2 list-disc list-inside mt-4">
                         <li><strong>Full Stack:</strong> HTML, CSS, JavaScript, Python & Django Framework.</li>
-                        <li>Database integration and API development.</li>
+                        <li>Database integration and robust API development.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 px-6 bg-[#0f0f0f]">
+   <!-- FEATURED WORKS -->
+    <section id="projects" class="py-16 md:py-24 px-6 bg-[#0f0f0f]">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">04 / Projects</h2>
-            <h3 class="text-4xl font-tech font-bold text-white mb-12">Featured Works</h3>
+            <div class="mb-12">
+                <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">04 / Projects</h2>
+                <h3 class="text-4xl font-tech font-bold text-white">Featured Works</h3>
+            </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="group bg-dark border border-white/5 hover:border-accent/50 transition-colors rounded-xl overflow-hidden">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="images/taxlaw.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Kenya Tax Law">
-                        <div class="absolute top-4 right-4 bg-accent text-white text-[10px] font-bold px-2 py-1 rounded uppercase">Professional / Live</div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-white mb-2">Kenya Tax Law Portal</h4>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">A professional legal portfolio and resource hub for a Tax Policy Consultant. Optimized for SEO and secure global access.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Custom DNS</span>
-                            <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">HTTPS/TLS</span>
-                            <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">SEO</span>
+
+                <!-- 1. KENYA TAX LAW -->
+                <div class="group bg-dark border border-white/5 hover:border-accent/50 transition-colors rounded-xl overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-card flex items-center justify-center">
+                            <img src="images/taxlaw.png" onerror="this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Kenya Tax Law">
+                            <div class="absolute top-4 right-4 bg-white/10 text-gray-400 border border-white/10 text-[10px] font-bold px-2 py-1 rounded uppercase">Live Site</div>
                         </div>
-                        <a href="https://kenyataxlaw.com" target="_blank" class="block w-full text-center py-2 bg-white/5 hover:bg-white/10 text-xs font-bold uppercase tracking-widest text-white transition-colors rounded">Visit Live Site</a>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-white mb-2">Kenya Tax Law Portal</h4>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">A professional legal portal and resource hub for a Tax Policy Consultant. Configured with secure custom DNS and global CDN caching.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Custom DNS</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">HTTPS/TLS</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">SEO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://kenyataxlaw.com" target="_blank" class="block w-full text-center py-2.5 bg-white/5 hover:bg-white/10 text-xs font-bold uppercase tracking-widest text-white transition-colors rounded border border-white/10">Visit Live Site</a>
                     </div>
                 </div>
 
-                <div class="group bg-dark border border-accent/30 hover:border-accent transition-colors rounded-xl overflow-hidden shadow-[0_0_20px_rgba(255,51,51,0.1)]">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="images/gasgo_dashboard.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="GasGo Dashboard">
-                        <div class="absolute top-4 left-4 bg-yellow-500 text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg">
-                            <i class="fa-solid fa-trophy mr-1"></i> 3rd Place Hackathon Winner
+                <!-- 2. GASGO -->
+                <div class="group bg-dark border border-white/5 hover:border-accent/50 transition-colors rounded-xl overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-card flex items-center justify-center">
+                            <img src="images/gasgo_dashboard.png" onerror="this.src='https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="GasGo Dashboard">
+                            <div class="absolute top-4 right-4 bg-white/10 text-gray-400 border border-white/10 text-[10px] font-bold px-2 py-1 rounded uppercase">Live Site</div>
                         </div>
-                        <div class="absolute top-4 right-4 bg-accent text-white text-[10px] font-bold px-2 py-1 rounded uppercase">Live Demo</div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-xl font-bold text-white">GasGo Smart Utility</h4>
+                                <span class="text-xs font-code text-accent">v1.0</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Smart LPG access and delivery management platform connecting households and verified vendors with live consumption tracking.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[10px] uppercase font-bold text-gray-400 border border-white/10 px-2 py-1 rounded">Django</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-400 border border-white/10 px-2 py-1 rounded">PostgreSQL</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-400 border border-white/10 px-2 py-1 rounded">Chart.js</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-xl font-bold text-white">GasGo Smart Utility</h4>
-                            <span class="text-xs font-code text-accent">v1.0</span>
-                        </div>
-                        <p class="text-gray-400 text-sm mb-4">GasGo is a smart LPG access and delivery platform that connects households, vendors, and riders through a centralized system. It was born out of a personal frustration shared by many households in Kenya: the struggle to find safe, reliable cooking gas</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-[10px] uppercase font-bold text-gray-400 border border-white/10 px-2 py-1 rounded">Django</span>
-                            <span class="text-[10px] uppercase font-bold text-gray-400 border border-white/10 px-2 py-1 rounded">Chart.js</span>
-                            <span class="text-[10px] uppercase font-bold text-gray-400 border border-white/10 px-2 py-1 rounded">PostgreSQL</span>
-                            <span class="text-[10px] uppercase font-bold text-gray-400 border border-white/10 px-2 py-1 rounded">Render</span>
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-3">
-                            <a href="https://gasgo-uby8.onrender.com/" target="_blank" class="text-center py-2 bg-accent text-white text-xs font-bold uppercase tracking-widest transition-colors rounded hover:bg-red-600">
-                                Launch App
-                            </a>
-                            <a href="https://github.com/Flora72/Gasgo" target="_blank" class="text-center py-2 bg-white/5 text-gray-300 text-xs font-bold uppercase tracking-widest transition-colors rounded border border-white/10 hover:bg-white/10">
-                                View Code
-                            </a>
-                        </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://gasgo-5otz.onrender.com/" target="_blank" class="block w-full text-center py-2.5 bg-white/5 hover:bg-white/10 text-xs font-bold uppercase tracking-widest text-white transition-colors rounded border border-white/10">Visit Live Site</a>
                     </div>
                 </div>
 
-                <div class="group bg-dark border border-white/5 hover:border-accent/50 transition-colors rounded-xl overflow-hidden">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="images/healingatlas.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Healing Atlas">
-                        <div class="absolute top-4 right-4 bg-accent text-white text-[10px] font-bold px-2 py-1 rounded uppercase">Live</div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-white mb-2">Healing Atlas</h4>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">A survivor-centered digital sanctuary designed for reflection and emotional recovery using Django.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Django</span>
-                            <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">PostgreSQL</span>
+                <!-- 3. GVHRC.ORG -->
+                <div class="group bg-dark border border-white/5 hover:border-accent/50 transition-colors rounded-xl overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-card flex items-center justify-center">
+                            <img src="images/gvhrc.png" onerror="this.src='https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=600&auto=format&fit=crop&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="GVHRC Platform">
+                            <div class="absolute top-4 right-4 bg-white/10 text-gray-400 border border-white/10 text-[10px] font-bold px-2 py-1 rounded uppercase">Live Site</div>
                         </div>
-                        <a href="https://healingatlas.onrender.com/" target="_blank" class="block w-full text-center py-2 bg-white/5 hover:bg-white/10 text-xs font-bold uppercase tracking-widest text-white transition-colors rounded">View Demo</a>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-white mb-2">Global Vision HR Consultancy</h4>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Complete corporate web platform engineered for an international HR firm, featuring streamlined corporate consultation routing.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Web Platform</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Consultancy</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://gvhrc.org/" target="_blank" class="block w-full text-center py-2.5 bg-white/5 hover:bg-white/10 text-xs font-bold uppercase tracking-widest text-white transition-colors rounded border border-white/10">Visit Live Site</a>
                     </div>
                 </div>
 
-                <div class="group bg-dark border border-white/5 hover:border-accent/50 transition-colors rounded-xl overflow-hidden">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="images/nazareth.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="QMS">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-white mb-2">Nazareth QMS</h4>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Smart hospital queue management system optimizing patient flow with advanced algorithms.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Python</span>
-                            <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Algorithms</span>
+                <!-- 4. NAZARETH QMS -->
+                <div class="group bg-dark border border-white/5 hover:border-accent/50 transition-colors rounded-xl overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-card flex items-center justify-center">
+                            <img src="images/nazareth.png" onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Nazareth QMS">
+                            <div class="absolute top-4 right-4 bg-white/10 text-gray-400 border border-white/10 text-[10px] font-bold px-2 py-1 rounded uppercase">Live Site</div>
                         </div>
-                        <a href="https://github.com/Flora72/NazarethQMS" target="_blank" class="block w-full text-center py-2 bg-white/5 hover:bg-white/10 text-xs font-bold uppercase tracking-widest text-white transition-colors rounded">View Code</a>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-white mb-2">Nazareth QMS</h4>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">Smart hospital queue management system with role-based portals for doctors, receptionists, and patients. Built as an installable mobile PWA.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Django</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">PostgreSQL</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">PWA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://nazarethqms.onrender.com/" target="_blank" class="block w-full text-center py-2.5 bg-white/5 hover:bg-white/10 text-xs font-bold uppercase tracking-widest text-white transition-colors rounded border border-white/10">Visit Live Site</a>
                     </div>
                 </div>
 
-                <div class="group bg-dark border border-white/5 hover:border-accent/50 transition-colors rounded-xl overflow-hidden mt-8 md:mt-0">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="images/vio.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Voice it out">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-white mb-2">Voice it out</h4>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">A platform built for women to amplify user voices. Built using Python and Django for robust backend performance.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Django</span>
-                            <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Voice for Women</span>
+                <!-- 5. VOICE IT OUT -->
+                <div class="group bg-dark border border-white/5 hover:border-accent/50 transition-colors rounded-xl overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-card flex items-center justify-center">
+                            <img src="images/vio.png" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" alt="Voice it out">
+                            <div class="absolute top-4 right-4 bg-white/10 text-gray-400 border border-white/10 text-[10px] font-bold px-2 py-1 rounded uppercase">Live Site</div>
                         </div>
-                        <a href="https://github.com/Flora72/VoiceitOut" target="_blank" class="block w-full text-center py-2 bg-white/5 hover:bg-white/10 text-xs font-bold uppercase tracking-widest text-white transition-colors rounded">View Code</a>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-white mb-2">Voice it out</h4>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-2">A survivor-centric advocacy and safety reporting dashboard designed to empower women with emergency resource routing and pattern detection.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Django</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">PostgreSQL</span>
+                                <span class="text-[10px] uppercase font-bold text-gray-500 border border-white/10 px-2 py-1 rounded">Advocacy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://voiceitout.onrender.com/" target="_blank" class="block w-full text-center py-2.5 bg-white/5 hover:bg-white/10 text-xs font-bold uppercase tracking-widest text-white transition-colors rounded border border-white/10">Visit Live Site</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="resume" class="py-24 px-6 bg-card border-t border-white/5">
+    <!-- RESUME SECTION -->
+    <section id="resume" class="py-16 md:py-24 px-6 bg-card border-t border-white/5">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">05 / Data</h2>
             <h3 class="text-4xl font-tech font-bold text-white mb-8">Curriculum Vitae</h3>
 
-            <div class="flex flex-col md:flex-row justify-center gap-8 mb-8">
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-8">
                 <button onclick="toggleResume()" class="cool-btn px-10 py-5 bg-white text-black font-bold font-tech text-lg uppercase tracking-widest hover:bg-gray-200 transition-all rounded shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                     <i class="fa-solid fa-eye mr-2"></i> View CV
                 </button>
@@ -590,7 +625,8 @@
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 bg-[#0f0f0f] border-t border-white/5">
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 md:py-24 px-6 bg-[#0f0f0f] border-t border-white/5">
         <div class="max-w-5xl mx-auto border border-white/10 bg-dark rounded-xl overflow-hidden shadow-2xl">
             <div class="bg-card px-6 py-3 border-b border-white/5 flex items-center justify-between">
                 <div class="flex gap-2">
@@ -640,10 +676,12 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="py-8 text-center text-xs text-gray-600 border-t border-white/5">
         <p>© 2026 Florence Ndinda</p>
     </footer>
 
+    <!-- SCRIPTS -->
     <script>
         function toggleResume() {
             const viewer = document.getElementById('resume-viewer');
@@ -669,14 +707,50 @@
             if (type === 'swe') {
                 sweDiv.classList.remove('hidden');
                 dsDiv.classList.add('hidden');
-                btnSwe.className = "px-4 py-2 text-xs font-tech font-bold uppercase rounded bg-accent text-white transition-all";
-                btnDs.className = "px-4 py-2 text-xs font-tech font-bold uppercase rounded text-gray-400 hover:text-white transition-all";
+                btnSwe.className = "flex-1 sm:flex-initial px-4 py-2.5 text-xs font-tech font-bold uppercase rounded bg-accent text-white transition-all text-center";
+                btnDs.className = "flex-1 sm:flex-initial px-4 py-2.5 text-xs font-tech font-bold uppercase rounded text-gray-400 hover:text-white transition-all text-center";
             } else {
                 sweDiv.classList.add('hidden');
                 dsDiv.classList.remove('hidden');
-                btnDs.className = "px-4 py-2 text-xs font-tech font-bold uppercase rounded bg-accent text-white transition-all";
-                btnSwe.className = "px-4 py-2 text-xs font-tech font-bold uppercase rounded text-gray-400 hover:text-white transition-all";
+                btnDs.className = "flex-1 sm:flex-initial px-4 py-2.5 text-xs font-tech font-bold uppercase rounded bg-accent text-white transition-all text-center";
+                btnSwe.className = "flex-1 sm:flex-initial px-4 py-2.5 text-xs font-tech font-bold uppercase rounded text-gray-400 hover:text-white transition-all text-center";
             }
+        }
+
+        // ANIMATED STAT COUNTERS ON SCROLL
+        const statCounters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        function runCounters() {
+            statCounters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const increment = Math.ceil(target / 40);
+                const updateCount = () => {
+                    count += increment;
+                    if (count < target) {
+                        counter.innerText = count;
+                        setTimeout(updateCount, 35);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animated) {
+                    runCounters();
+                    animated = true;
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.getElementById('stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
         }
     </script>
 
